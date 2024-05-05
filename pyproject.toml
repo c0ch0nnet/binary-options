@@ -158,7 +158,7 @@ extend-ignore = [
 
 [tool.ruff.lint.extend-per-file-ignores]
 # PLC0415 https://docs.astral.sh/ruff/rules/import-outside-top-level – мы сами такое используем в некоторых местах
-# F403 https://docs.astral.sh/ruff/rules/undefined-local-with-import-star – wildcards в app.py и тестах терпимо
+# F403 https://docs.astral.sh/ruff/rules/undefined-local-with-import-star – wildcards в init.py и тестах терпимо
 # F405 https://docs.astral.sh/ruff/rules/undefined-local-with-import-star-usage – wildcards в тестах терпимо
 # SIM300 https://docs.astral.sh/ruff/rules/yoda-conditions – разрешаем йоду для ассертов
 
