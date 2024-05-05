@@ -7,7 +7,7 @@ class HelloView(View):
     async def get(self):
         return aiohttp_json_response(
             data={
-                "status": 200,
+                "status": "ok",
                 "data": "Welcome to binary-options-bot",
             }
         )
