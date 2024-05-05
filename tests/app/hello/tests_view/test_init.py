@@ -1,7 +1,6 @@
 from aiohttp.test_utils import TestClient
 
 
-
 class TestHelloView:
     async def test_success(self, cli: TestClient) -> None:
         response = await cli.get("/hello")
