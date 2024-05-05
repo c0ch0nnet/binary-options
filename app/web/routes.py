@@ -1,9 +1,21 @@
+from aiohttp.web import json_response as aiohttp_json_response
 from aiohttp.web_app import Application
+from aiohttp.web_urldispatcher import View
+
+
+class HelloView(View):
+    async def get(self):
+        return aiohttp_json_response(
+            data={
+                "status": 200,
+                "data": "Welcome to binary-options-bot",
+            }
+        )
+
 
 __all__ = ("setup_routes",)
 
 
-def setup_routes(application: Application):
-    import app.users.routes
-
-    app.users.routes.register_urls(application)
+def setup_routes(app: Application):
+    app.router.add_view("/", HelloView)
+    app.router.add_view("/hello", HelloView)
